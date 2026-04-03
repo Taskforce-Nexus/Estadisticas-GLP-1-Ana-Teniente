@@ -1,3 +1,8 @@
 
 # OpenClaw runtime state
 .openclaw/
+
+# Environment
+.env
+.env.local
+.env.*.local
