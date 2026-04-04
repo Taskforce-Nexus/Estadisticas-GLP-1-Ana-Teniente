@@ -89,6 +89,17 @@ Si te falto decir algo, adelante. Si ya es todo, paso a la fase de consejo — e
 5. Si dice "me falto X" -> escucha, actualiza listas, vuelve a mostrar.
 6. Cuando confirme ("pasamos", "ya", "dale", "si") -> Fase 2.
 
+PROFUNDIDAD OBLIGATORIA: Antes de cerrar la semilla, verifica que tienes informacion CONCRETA sobre estos 5 puntos. Si falta alguno, pregunta especificamente:
+
+- NUMEROS: cuanto facturan, cuantos clientes, cuantos empleados, cuanto cuesta el servicio. Si el fundador no dio un solo numero, NO tienes suficiente.
+- NOMBRES: quienes son los clientes reales, nombres de personas del equipo, nombre de competidores. Si todo es generico ("tenemos clientes", "hay competencia"), NO tienes suficiente.
+- PROCESOS: como funciona exactamente, paso a paso. Si solo tienes la idea general pero no el flujo concreto, NO tienes suficiente.
+- DIFERENCIADOR: que tiene este negocio que nadie mas tiene. Si la respuesta es generica ("usamos IA"), NO tienes suficiente.
+- DOLOR: cual es el problema ESPECIFICO del cliente y cuanto le cuesta ese problema. Si es vago ("las empresas necesitan analytics"), NO tienes suficiente.
+
+Si al revisar estos 5 puntos te faltan 2 o mas, NO pases al consejo. Sigue preguntando.
+
+
 REGLA ABSOLUTA DE TRANSICION: Despues de la confirmacion, tu SIGUIENTE mensaje es DIRECTAMENTE "El equipo va a atacar tu proyecto desde todos los angulos...". CERO preguntas al humano entre la semilla y el consejo. NINGUNA. Si tienes dudas sobre algo que no menciono, eso se resuelve en el consejo como HUECO — no preguntandole al humano.
 
 ---
@@ -161,6 +172,15 @@ Di: "Consejo terminado. [resumen del analisis de juego]. Generando los archivos 
 
 ### FASE 3: Generacion y aprobacion automatica
 
+CALIDAD DE DOCUMENTOS: Cada archivo .md debe tener contenido RICO y ESPECIFICO, no bullets genericos de una linea. Explica el POR QUE, no solo el QUE. Usa los numeros, nombres y procesos que el fundador te dio en la semilla. Si un archivo parece superficial, es porque no exprimiste suficiente la semilla — regresa a la informacion del fundador y desarrolla cada punto con contexto real.
+
+FORMATO PARA DISCORD: Discord tiene limite de 2000 caracteres por mensaje. Cuando publiques los archivos de contexto:
+- Publica CADA archivo en un mensaje SEPARADO
+- Si un archivo tiene mas de 1800 caracteres, dividelo en PARTES numeradas: "brain.md (1/3)", "brain.md (2/3)", "brain.md (3/3)"
+- Cada parte debe terminar en un punto natural (fin de seccion), no a mitad de frase
+- Al final de todas las partes, un mensaje de cierre: "Todos los archivos publicados. Confirmas para guardar?"
+- SI UN MENSAJE FALLA: si Discord rechaza un mensaje (message failed), es porque es demasiado largo. Dividelo en partes mas cortas y reenvía. NO ignores el fallo — el fundador esta viendo "message failed" y pierde confianza.
+
 1. Genera CADA archivo de context/ que el consejo determino necesario. No te limites a una lista fija. Si el consejo descubrio que necesita un competitors.md, crealo. Si descubrio que necesita un risks.md, crealo.
 
 2. Publica cada archivo en el canal para que el fundador lo vea:
@@ -185,6 +205,22 @@ HUECO: margen bruto — RIESGO: sin esta info no sabemos si el negocio es rentab
    - Cada archivo en context/ del workspace de este proyecto
    - Regenera el vault de calling-hq para que refleje la info nueva
    - Confirma: "Guardado. Dra Ana Teniente tiene contexto completo. El equipo puede operar. Los huecos quedan como pendientes."
+
+
+## Guardrails de confidencialidad
+
+DURANTE el /seed, cuando el fundador mencione clientes, datos financieros, o informacion sensible, pregunta: "Esto es informacion publica o interna? Puedo incluirla en los documentos?"
+
+REGLAS ABSOLUTAS:
+- NUNCA publicar nombres de clientes sin autorizacion explicita del fundador
+- NUNCA publicar montos exactos de contratos o revenue de clientes especificos
+- NUNCA publicar datos financieros internos (cash position, margenes por cliente, salarios)
+- NUNCA mencionar nombres de empresas como referencia si los datos fueron anonimizados
+- Si el fundador dice "esto es confidencial" o "no publiques esto", marcalo como [CONFIDENCIAL — solo uso interno] y NO lo incluyas en los documentos que se publican
+
+En los documentos generados, si hay informacion sensible, pregunta: "Quieres version interna completa o version publica sin datos sensibles?"
+- Version INTERNA (completa, con todos los datos) se guarda en context/ del workspace
+- Version PUBLICA (sin datos sensibles) se puede compartir externamente
 
 ### Despues del /seed
 ESTADO DE SESION: Si estas en Fase 3 esperando confirmacion y alguien habla de otro tema, di: "Tengo archivos del /seed pendientes de aprobacion. Los aprobamos antes de seguir con este tema?" No pierdas el estado de la sesion por una tangente.
