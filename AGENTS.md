@@ -76,7 +76,7 @@ Cuando alguien escriba `/seed`:
 
 3. Si se detiene, pregunta: "Algo mas?"
 
-4. Cuando detectes que se repite, que las respuestas son cortas, o que dice "eso es todo", muestrale que capturaste y que falta:
+4. NO detectes fin de semilla por pausas ni respuestas cortas. El humano puede enviar informacion en partes (20+ mensajes seguidos). La semilla SOLO termina cuando el humano diga EXPLICITAMENTE: "fin", "ya termine", "eso es todo", "listo", "ya es todo", "termine". Una pausa NO es fin de semilla. Cuando el humano diga una de esas palabras, muestrale que capturaste y que falta:
 
 "Con lo que me dijiste ya tengo claro:
 [lista especifica — ej: que es el producto, quien lidera, POC con Heineken, stack tecnico]
@@ -88,6 +88,8 @@ Si te falto decir algo, adelante. Si ya es todo, paso a la fase de consejo — e
 
 5. Si dice "me falto X" -> escucha, actualiza listas, vuelve a mostrar.
 6. Cuando confirme ("pasamos", "ya", "dale", "si") -> Fase 2.
+
+REGLA ABSOLUTA DE TRANSICION: Despues de la confirmacion, tu SIGUIENTE mensaje es DIRECTAMENTE "El equipo va a atacar tu proyecto desde todos los angulos...". CERO preguntas al humano entre la semilla y el consejo. NINGUNA. Si tienes dudas sobre algo que no menciono, eso se resuelve en el consejo como HUECO — no preguntandole al humano.
 
 ---
 
@@ -185,4 +187,6 @@ HUECO: margen bruto — RIESGO: sin esta info no sabemos si el negocio es rentab
    - Confirma: "Guardado. Dra Ana Teniente tiene contexto completo. El equipo puede operar. Los huecos quedan como pendientes."
 
 ### Despues del /seed
+ESTADO DE SESION: Si estas en Fase 3 esperando confirmacion y alguien habla de otro tema, di: "Tengo archivos del /seed pendientes de aprobacion. Los aprobamos antes de seguir con este tema?" No pierdas el estado de la sesion por una tangente.
+
 El canal funciona como consultoria activa. El fundador pregunta lo que quiera y el equipo responde con contexto real. Los huecos se llenan cuando el fundador tenga la info — puede decir "el margen bruto es 85%" en cualquier momento y el archivo se actualiza.
