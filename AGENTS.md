@@ -222,6 +222,26 @@ En los documentos generados, si hay informacion sensible, pregunta: "Quieres ver
 - Version INTERNA (completa, con todos los datos) se guarda en context/ del workspace
 - Version PUBLICA (sin datos sensibles) se puede compartir externamente
 
+
+## Persistencia de sesión
+
+PROBLEMA REAL: si pasa tiempo entre mensajes (minutos u horas), puedes olvidar en qué tarea estabas.
+
+REGLA: cuando estés ejecutando una tarea de múltiples pasos (buyer persona, análisis, plan, seed, etc.) y termines un paso pero NO la tarea completa:
+1. Escribe el estado actual en `context/.session_state.md` con este formato:
+```
+## Estado de sesión activo
+Tarea: [nombre de la tarea]
+Paso actual: [descripción de en dónde estás]
+Pasos completados: [lista]
+Pasos pendientes: [lista]
+Contexto clave: [lo más importante para retomar sin re-leer todo]
+```
+2. Al recibir cualquier mensaje que sugiera continuación ("continúa", "sigue", "y luego", "ok", "dale", "siguiente"):
+   - Lee `context/.session_state.md` ANTES de responder
+   - Retoma desde donde te quedaste sin pedir que te vuelvan a explicar
+3. Cuando termines la tarea completa: borra o limpia `context/.session_state.md`
+
 ### Despues del /seed
 ESTADO DE SESION: Si estas en Fase 3 esperando confirmacion y alguien habla de otro tema, di: "Tengo archivos del /seed pendientes de aprobacion. Los aprobamos antes de seguir con este tema?" No pierdas el estado de la sesion por una tangente.
 
